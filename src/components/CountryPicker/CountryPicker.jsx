@@ -9,12 +9,10 @@ const CountryPicker = ({handleCountryChange}) => {
     useEffect(() => {
         const fetchAPI = async() => {
             const countryResponse = await fetchCountries();
-            console.log("setFetched RANNNNNN");
             setFetchedCountry(countryResponse);
         }
         fetchAPI();
     },[setFetchedCountry])
-    console.log(fetchedCountry);
     return ( 
         <FormControl className={styles.formControl}>
             <NativeSelect defaultValue="" onChange={(e)=>handleCountryChange(e.target.value)}>
