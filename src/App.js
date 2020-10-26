@@ -25,6 +25,7 @@ class App extends React.Component{
         const { data,country } = this.state;
         return (
             <div className={styles.container}>
+                <img src="https://image.similarpng.com/very-thumbnail/2020/08/Cartoon-characters-sad-emojis-coronavirus-microbes-covid-19-on-transparent-background-PNG.png" style={{height:"25vh",width:"auto",backgroundColor:"white"}} />
                 <Cards data={data}/>
                 <CountryPicker handleCountryChange={this.handleCountryChange}/>
                 <Chart data={data} country={country}/>
