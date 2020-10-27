@@ -4,4 +4,15 @@
     justify-content: center;
     width:85%;
     height: 100vh;
+    display: block;
+}
+
+.pie{
+    height:40vh;
+    width:100%;
+}
+.bar{
+    height:60vh;
+    margin-bottom: 30px;
+    width:100%;
 }

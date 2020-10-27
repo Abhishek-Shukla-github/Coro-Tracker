@@ -1,5 +1,5 @@
 import React, {useState,useEffect} from 'react';
-import { Line, Bar } from "react-chartjs-2";
+import { Line, Bar,Pie } from "react-chartjs-2";
 import styles from "./Chart.module.css";
 import { fetchDailyData } from '../../api';
 
@@ -48,7 +48,7 @@ const Chart = ({ data: {confirmed,recovered,deaths},country}) => {
 
   const barChart = (
     confirmed ? (
-      <Bar
+      <Bar style={{height:"30vh"}}
         data={{
           labels: ["Infected", "Recovered" ,"Deaths"],
           datasets:[{
@@ -63,7 +63,33 @@ const Chart = ({ data: {confirmed,recovered,deaths},country}) => {
         }}
         options={{
           legend: { display: false },
-          title: {display:true,text:`Current situation in ${country}`}
+          title: { display: true, text: `Current situation in ${country}` },
+          maintainAspectRatio:false,
+        }}
+      />
+    ):
+      null
+  );
+
+  const pieChart = (
+    confirmed ? (
+      <Pie 
+        data={{
+          labels: ["Infected", "Recovered" ,"Deaths"],
+          datasets:[{
+            label: "People",
+            backgroundColor: [
+              'rgba(255, 0, 0, 0.5)',
+              'rgba(0, 255, 0, 0.5)',
+              'rgba(0, 0,255, 0.5)'
+            ],
+            data: [confirmed.value, recovered.value, deaths.value]
+          }]
+        }}
+        options={{
+          legend: { display: false },
+          title: { display: true, text: `Current situation in ${country}` },
+          maintainAspectRatio:false,
         }}
       />
     ):
@@ -71,7 +97,16 @@ const Chart = ({ data: {confirmed,recovered,deaths},country}) => {
   );
 
     return (
-        <div className={styles.container}>{country ?barChart : lineChart}</div>
+      <div className={styles.container}>{country ?
+        <>
+          <div className={styles.bar}>
+            {barChart}
+          </div>
+          <div className={styles.pie}>
+            {pieChart}
+          </div>
+        </>
+        : lineChart}</div>
     );
 }
 
