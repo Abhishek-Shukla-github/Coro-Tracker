@@ -6,11 +6,16 @@ import { fetchData } from "./api";
 class App extends React.Component{
     state = {
         data: {},
-        country:"",
+        country: "",
+        checked:false
     }
     async componentDidMount() {
         const fetchedData = await fetchData();
         this.setState({data:fetchedData})
+    }
+
+    handleChecked = (prevChecked) => {
+        this.setState({checked:!prevChecked})
     }
 
     handleCountryChange = async (country)=>{
@@ -22,13 +27,13 @@ class App extends React.Component{
     }
 
     render() {
-        const { data,country } = this.state;
+        const { data,country,checked } = this.state;
         return (
             <div className={styles.container}>
                 <img alt="Covid" src="https://image.similarpng.com/very-thumbnail/2020/08/Cartoon-characters-sad-emojis-coronavirus-microbes-covid-19-on-transparent-background-PNG.png" style={{height:"25vh",width:"auto",backgroundColor:"white"}} />
                 <Cards data={data}/>
-                <CountryPicker handleCountryChange={this.handleCountryChange}/>
-                <Chart data={data} country={country}/>
+                <CountryPicker handleCountryChange={this.handleCountryChange} country={country} checked={checked} handleChecked={this.handleChecked}/>
+                <Chart data={data} country={country} checked={checked}/>
             </div>
         )
     }

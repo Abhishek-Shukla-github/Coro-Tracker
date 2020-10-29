@@ -4,7 +4,7 @@ import styles from "./Chart.module.css";
 import { fetchDailyData } from '../../api';
 
 
-const Chart = ({ data: {confirmed,recovered,deaths},country}) => {
+const Chart = ({ data: {confirmed,recovered,deaths},country,checked}) => {
     const [dailyData, setDailyData] = useState([]);
   useEffect(() => {
     const fetchAPI = async () => {
@@ -14,8 +14,15 @@ const Chart = ({ data: {confirmed,recovered,deaths},country}) => {
     fetchAPI();
   }, []);
 
-  console.log(confirmed, recovered, deaths);
-   
+  // const months = dailyData.map(({ date }) => date);
+  // console.log(months);
+  
+  const monthlyLineChart = (
+    <div>
+      <h1>Monthly Line Chart</h1>
+    </div>
+  );
+
    const lineChart = (
     dailyData[0] ? (
       <Line
@@ -97,7 +104,8 @@ const Chart = ({ data: {confirmed,recovered,deaths},country}) => {
   );
 
     return (
-      <div className={styles.container}>{country ?
+      <div className={styles.container}>
+        {country ?
         <>
           <div className={styles.bar}>
             {barChart}
@@ -106,7 +114,7 @@ const Chart = ({ data: {confirmed,recovered,deaths},country}) => {
             {pieChart}
           </div>
         </>
-        : lineChart}</div>
+        : (checked ? monthlyLineChart : lineChart)}</div>
     );
 }
 
