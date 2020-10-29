@@ -14,7 +14,6 @@ const CountryPicker = ({handleCountryChange,handleChecked,checked,country}) => {
     },[setFetchedCountry])
     return ( 
         <FormControl className={styles.formControl} >
-            {console.log(checked)}
             <NativeSelect defaultValue="" style={{color:"#85625f"}} onChange={(e)=>handleCountryChange(e.target.value)}>
                 <option key="Global" value="">Global</option>
                 {fetchedCountry.map((country) => {
@@ -22,7 +21,7 @@ const CountryPicker = ({handleCountryChange,handleChecked,checked,country}) => {
                 })}
             </NativeSelect>
             {!country ? <FormControlLabel style={{ alignSelf: "center" }}
-                control={<Checkbox name="checkedA" onChange={() => { handleChecked(checked) }} />}
+                control={<Checkbox name="checkedA" style={{padding:"20px"}} onChange={() => { handleChecked(checked) }} />}
                 label="Monthly data"
             /> : null}
         </FormControl>
