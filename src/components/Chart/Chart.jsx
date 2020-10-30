@@ -188,45 +188,19 @@ const Chart = ({ data: {confirmed,recovered,deaths},country,checked}) => {
             label: 'Infected',
             borderColor: '#3333ff',
             fill: true,
-          }, {
+          },{
             data: totalDeaths,
             label: 'Deaths',
             borderColor: 'red',
             backgroundColor: 'rgba(255, 0, 0, 0.5)',
             fill: true,
-          }, {
+          },{
             data: totalRecovered,
             label: 'Recovered',
             borderColor: 'green',
             backgroundColor: 'rgba(0, 255, 0, 0.5)',
             fill: true,
-          }],
-        }}
-        options={{
-          responsive:true,
-          pan: {
-              enabled: true,
-              mode: "xy",
-              speed: 1,
-              threshold: 1,
-            },
-            zoom: {
-              enabled: true,
-              drag: false,
-              mode: "xy",
-              limits: {
-                max: 1,
-                min: 0.5,
-              },
-              rangeMin: {
-                x: 2,
-                y: 1,
-              },
-              rangeMax: {
-                x: 10,
-                y: 150,
-              },
-            },
+          }]
         }}
       />
     ): null
@@ -280,31 +254,7 @@ const Chart = ({ data: {confirmed,recovered,deaths},country,checked}) => {
         options={{
           legend: { display: false },
           title: { display: true, text: `Current situation in ${country}` },
-          maintainAspectRatio: false,
-          responsive:true,
-          pan: {
-              enabled: true,
-              mode: "xy",
-              speed: 1,
-              threshold: 1,
-            },
-            zoom: {
-              enabled: true,
-              drag: false,
-              mode: "xy",
-              limits: {
-                max: 1,
-                min: 0.5,
-              },
-              rangeMin: {
-                x: 2,
-                y: 1,
-              },
-              rangeMax: {
-                x: 10,
-                y: 150,
-              },
-            },
+          maintainAspectRatio:false,
         }}
       />
     ):
