@@ -8,10 +8,10 @@
 
 ## Introduction:-
 
-Coro-tracker is build with ReactJS and uses MaterialUI to design the entire UI.
-Axios is the package used to fetch the data from the API.
-ChartJS is used to plot the various statistical diagrams based on the fethched data from the API.
-The app uses React Hooks and small package called as "classnames" to make the task of assigning class to the components and elements easier.
+*Coro-tracker is build with ReactJS and uses MaterialUI to design the entire UI.
+*Axios is the package used to fetch the data from the API.
+*ChartJS is used to plot the various statistical diagrams based on the fetched data from the API.
+*The app uses React Hooks and small package called as "classnames" to make the task of assigning class to the components and elements easier.
 
 Setup:-
 run ``` npm i && npm start ```
