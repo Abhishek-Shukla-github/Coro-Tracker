@@ -1,7 +1,7 @@
 # Coro-Tracker: The statistical depiction of the real time covid cases.
 ### [Live Site](https://coro-tracker.netlify.app/)
 
-[overview](https://drive.google.com/file/d/1clDamnQH9O--fVTJGIqkTno4NaXLoved/view?usp=sharing)
+![Overview](https://drive.google.com/file/d/1clDamnQH9O--fVTJGIqkTno4NaXLoved/view?usp=sharing)
 (https://drive.google.com/file/d/1L6rhIcpWs6cS94DPhfP_kI5hP0VG2sLj/view?usp=sharing)
 (https://drive.google.com/file/d/16kSjfYaOgyjMANGSAg1504OJ-Vg_uKhl/view?usp=sharing)
 (https://drive.google.com/file/d/1_CXw4CLTAgvmAmT6ViTWrT7bcAq6gMME/view?usp=sharing)
