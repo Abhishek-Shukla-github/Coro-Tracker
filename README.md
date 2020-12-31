@@ -8,9 +8,10 @@
 
 ## Introduction:-
 
-Coro-tracker is a react web app which represnts the daily corona virus cases worldwide , of different countries using different mathematical and statistical figures like Line Graphs, Bar graphs and Pie Charts.
-
-The main motto of the project was to work with real time data with an API and use the data from the API to plot these statistical depictions real time.
+Coro-tracker is build with ReactJS and uses MaterialUI to design the entire UI.
+Axios is the package used to fetch the data from the API.
+ChartJS is used to plot the various statistical diagrams based on the fethched data from the API.
+The app uses React Hooks and small package called as "classnames" to make the task of assigning class to the components and elements easier.
 
 Setup:-
 run ``` npm i && npm start ```
