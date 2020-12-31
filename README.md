@@ -1,12 +1,12 @@
 # Coro-Tracker: The statistical depiction of the real time covid cases.
 ### [Live Site](https://coro-tracker.netlify.app/)
 
-![Overview](https://drive.google.com/file/d/1clDamnQH9O--fVTJGIqkTno4NaXLoved/view?usp=sharing)
+![Overview] (https://drive.google.com/file/d/1clDamnQH9O--fVTJGIqkTno4NaXLoved/view?usp=sharing)
 (https://drive.google.com/file/d/1L6rhIcpWs6cS94DPhfP_kI5hP0VG2sLj/view?usp=sharing)
 (https://drive.google.com/file/d/16kSjfYaOgyjMANGSAg1504OJ-Vg_uKhl/view?usp=sharing)
-(https://drive.google.com/file/d/1_CXw4CLTAgvmAmT6ViTWrT7bcAq6gMME/view?usp=sharing)
+(https://i.ibb.co/f2khQRk/coro-tracker-3.jpg)
 
-##Introduction:-
+## Introduction:-
 
 Coro-tracker is a react web app which represnts the daily corona virus cases worldwide , of different countries using different mathematical and statistical figures like Line Graphs, Bar graphs and Pie Charts.
 
